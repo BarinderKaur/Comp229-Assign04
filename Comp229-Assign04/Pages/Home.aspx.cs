@@ -13,7 +13,7 @@ namespace Comp229_Assign04
         protected void Page_Load(object sender, EventArgs e)
         {
             Model md01 = new Comp229_Assign04.Model();
-            md01.name = " Barinder ";
+            md01.name = "b";
             Literal1.Text = md01.name;
 
             Model md02 = new Model();
