@@ -78,7 +78,7 @@ namespace Comp229_Assign04
             catch (Exception ex)
             {
                 
-            statusLabel.Text = "Coudn't send the message!";
+            //statusLabel.Text = "Coudn't send the message!";
                }
             }
         }
