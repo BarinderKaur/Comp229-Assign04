@@ -1,6 +1,4 @@
 ﻿using System.IO;
-
-using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -9,8 +7,6 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System;
 
-using System.Web.Security;
-using System.Web.SessionState;
 
 namespace Comp229_Assign04
 {
@@ -20,6 +16,10 @@ namespace Comp229_Assign04
         public const string ModelsJsonFilePath = "~/Data/Assign04.json";
         private const string ModelsNewJsonFilePath = "~/Data/NewAssign04.json";
         private static Object statusLabel;
+
+
+        public static object Model { get; internal set; }
+
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
@@ -73,9 +73,14 @@ namespace Comp229_Assign04
                 smtpClient.Send(message);
                 // statusLabel.Text = "Email sent.";
             }
+
+
             catch (Exception ex)
             {
-                statusLabel.Text = "Coudn't send the message!";
+                
+            statusLabel.Text = "Coudn't send the message!";
+               }
             }
         }
-}
+    }
+

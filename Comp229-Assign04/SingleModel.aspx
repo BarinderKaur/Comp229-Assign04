@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SingleModel.aspx.cs" Inherits="Comp229_Assign04._Default" %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="SingleModel.aspx.cs" Inherits="Comp229_Assign04.Home" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -64,7 +64,7 @@
 
                 </tr>
                 <tr>
-                    <td>Type: </td>
+                    <td>Types: </td>
                    
                         <asp:Repeater runat="server" ID="typeRepeater">
                             <ItemTemplate>
@@ -73,7 +73,6 @@
                                     </td>
                             </ItemTemplate>
                             
-
                         </asp:Repeater>
                     
                 </tr>
@@ -100,44 +99,39 @@
                                 <tr>
                                     <td>Name: </td>
                                     <td>
-                                        <asp:Label runat="server" Text="<%# Eval("name") %>" />
+                                        <asp:Label runat="server" Text='<%# Eval("name") %>' />
 
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Type: </td>
                                     <td>
-                                        <asp:Label runat="server" Text="<%# Eval("type") %>" />
+                                        <asp:Label runat="server" Text='<%# Eval("type") %>' />
 
                                     </td>
                                     <td>Rating: </td>
                                     <td>
-                                        <asp:Label runat="server" Text="<%# Eval("rating") %>" />
+                                        <asp:Label runat="server" Text='<%# Eval("rating") %>' />
 
                                     </td>
                                     <td>Range: </td>
                                     <td>
-                                        <asp:Label runat="server" Text="<%# Eval("range") %>" />
+                                        <asp:Label runat="server" Text='<%# Eval("range") %>' />
 
                                     </td>
-                                    <td>Type: </td>
-                                    <td>
-                                        <asp:Label runat="server" Text="<%# Eval("type") %>" />
-
-                                    </td>
+                                    
                                 </tr>
                                 <tr>
                                     <td colspan="6">
-                                         <asp:Label runat="server" Text="<%# Eval("description") %>" />
+                                         <asp:Label runat="server" Text='<%# Eval("description") %>' />
 
 
                                     </td>
                                 </tr>
         </Itemtemplate>
                             </asp:Repeater>
-        
-
-                <tr>
+        <tr>
+    
                     <td>Defense Chart: </td>
                     <td>
                         
@@ -154,15 +148,10 @@
                                     </tr>
                                 </ItemTemplate>
                                 </asp:Repeater>
-
-                            
                         </table>
     </td>
     </tr>
-
-                   
-                <tr>
-                
+        <tr>
                     <td>Mobility: </td>
                     <td>
                         <asp:Label runat="server" ID="mobilityLabel" />
@@ -174,8 +163,6 @@
                         <asp:Label runat="server" ID="willpowerLabel" />
                     </td>
                 </tr>
-                 
-               
                                 <tr>
                                     <td>Resilience: </td>
                     <td>
@@ -191,21 +178,17 @@
                                 <tr>
                                     <td>Name: </td>
                                     <td>
-                                        <asp:Label runat="server" Text="<%# Eval("name") %>" />
+                                        <asp:Label runat="server" Text='<%# Eval("name") %>' />
 
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="6">
-                                        <asp:Label runat="server" Text="<%# Eval("description") %>" />
-
+                                        <asp:Label runat="server" Text='<%# Eval("description") %>'/>
                                     </td>
                                     </tr>
-                               
                             </ItemTemplate>
                         </asp:Repeater>
-                        
-                  
             </table>
                         </td>
                                     </tr>
